@@ -4,20 +4,19 @@ This is built from a demo and template for the backend assignment of the 2023 Ti
 The task is to develop a backend Golang instant messaging system using services from an HTTP server and an RPC server.
 
 ### To run and build the program 
-<u>docker-compose -f docker-compose.yml up -d --build</u>
+``` docker-compose -f docker-compose.yml up -d --build
 
 
 ### To run the program 
-<u>
-docker-compose up -d</u>
+``` docker-compose up -d
 
 
 ### To clean up the program after run 
-<u>docker-compose down</u>
+``` docker-compose down
 
 
 ### To determine if the program is running 
-<u>curl localhost:8080/ping</u>
+``` curl localhost:8080/ping
 
 
 
