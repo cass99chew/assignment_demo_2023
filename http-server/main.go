@@ -32,7 +32,7 @@ func main() {
 	h := server.Default(server.WithHostPorts("0.0.0.0:8080"))
 
 	h.GET("/ping", func(c context.Context, ctx *app.RequestContext) {
-		ctx.JSON(consts.StatusOK, utils.H{"message": "pong"})
+		ctx.JSON(consts.StatusOK, utils.H{"message": "pongi"})
 	})
 
 	h.POST("/api/send", sendMessage)
@@ -57,8 +57,10 @@ func sendMessage(ctx context.Context, c *app.RequestContext) {
 	})
 	if err != nil {
 		c.String(consts.StatusInternalServerError, err.Error())
+
 	} else if resp.Code != 0 {
 		c.String(consts.StatusInternalServerError, resp.Msg)
+
 	} else {
 		c.Status(consts.StatusOK)
 	}
